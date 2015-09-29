@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="2454px" height="102px" viewBox="0 0 2454 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Timeline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Timeline" sketch:type="MSArtboardGroup">
+            <path d="M22,54.65625 L2422,54.65625" id="Line" stroke="#0196D5" stroke-width="7" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            <circle id="Oval-1-Copy" fill="#0196D5" sketch:type="MSShapeGroup" transform="translate(106.002394, 55.002394) rotate(-276.000000) translate(-106.002394, -55.002394) " cx="106.002394" cy="55.0023943" r="8"></circle>
+            <circle id="Oval-1-Copy-2" fill="#0196D5" sketch:type="MSShapeGroup" transform="translate(173.002394, 55.002394) rotate(-276.000000) translate(-173.002394, -55.002394) " cx="173.002394" cy="55.0023943" r="8"></circle>
+            <circle id="Oval-1-Copy-3" fill="#0196D5" sketch:type="MSShapeGroup" transform="translate(229.002425, 55.002394) rotate(-276.000000) translate(-229.002425, -55.002394) " cx="229.002425" cy="55.0023943" r="8"></circle>
+            <circle id="Oval-1-Copy-4" fill="#0196D5" sketch:type="MSShapeGroup" transform="translate(275.002425, 55.002394) rotate(-276.000000) translate(-275.002425, -55.002394) " cx="275.002425" cy="55.0023943" r="8"></circle>
+            <polygon id="Star-1" fill="#0196D5" sketch:type="MSShapeGroup" points="2431 61 2419.24429 67.1803399 2421.48943 54.0901699 2411.97887 44.8196601 2425.12215 42.9098301 2431 31 2436.87785 42.9098301 2450.02113 44.8196601 2440.51057 54.0901699 2442.75571 67.1803399 "></polygon>
+            <circle id="Oval-1" fill="#0196D5" sketch:type="MSShapeGroup" cx="16" cy="55" r="9"></circle>
+        </g>
+    </g>
+</svg>
