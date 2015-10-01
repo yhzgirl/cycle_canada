@@ -21,7 +21,7 @@
 
 	<!-- build:js scripts/vendor/modernizr.js -->
 	<script src="/bower_components/modernizr/modernizr.js"></script>
-	<script data-main="scripts/main" src="scripts/require.js"></script>
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
 	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
 </head>
@@ -47,31 +47,41 @@
 
 		<div class="row stats">
 
-			<div class="instagram col-lg-2">
+			<div class="donate col-lg-1">
+				<p>Donate UK</p>
+				<p>Donate Canada</p>
+			</div>
+			
+			<div class="col-lg-2">
+				<h3>Latest Pics</h3>
+				<div class="instagramMedia"></div>
+
 				<script>
-					var xhr = new XDomainRequest();
-					xhr.open("GET", "https://api.instagram.com/v1/users/self/media/recent/?access_token=1910658902.1fb234f.f63cc1da75534994b18d3794ff5b6561");
-					xhr.onreadystatechange = function () {
-						if (xhr.readyState === 4 && xhr.status === 200) {
-							try {
-								var latestMedia = JSON.parse(xhr.responseText);
-								var image = latestMedia.data[0].link;
-								return image;
-							} catch (error) {
-								printError(error);
+					function instagram() {
+						$.ajax({
+							url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=1910658902.aa2c401.cf848414fa6f43cd831db1c0895c79a9&callback=callback",
+							jsonp: "callback",
+							dataType: "jsonp",
+							success: function (response) {
+								var latestMedia = response.data[0].images.low_resolution.url;
+								var image = "<img src='" + latestMedia + "'>";
+								$('.instagramMedia').html(image);
 							}
-						}
-					};
-					xhr.send();
+						});
+					}
+					instagram();
 				</script>
+
 			</div>
 
 			<div class="youtube col-lg-3">
+				<h3>The Vlog - Follow the adventure <i class="fa fa-share fa-rotate-90"></i></h3>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/mWC514efG40" frameborder="0" allowfullscreen></iframe>
 			</div>
 
 			<div class="twitter col-lg-3">
-				<a class="twitter-timeline" href="https://twitter.com/cycling_woman" data-widget-id="637750175327481856">Tweets by @cycling_woman</a>
+				<h3>Tweets</h3>
+				<a class="twitter-timeline" href="https://twitter.com/cycling_woman" data-widget-id="637750175327481856"></a>
 				<script>
 					! function (d, s, id) {
 						var js, fjs = d.getElementsByTagName(s)[0],
@@ -86,39 +96,36 @@
 				</script>
 			</div>
 
-			<div class="strava col-lg-4">
+			<div class="strava col-lg-3">
+				<h3>How far we've travelled this week.</h3>
 				<iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/6288849/activity-summary/7fd9e0e1cfb50f535a4affd0e0e692e3f80c8916'></iframe>
-				<iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/6288849/latest-rides/7fd9e0e1cfb50f535a4affd0e0e692e3f80c8916'></iframe>
 			</div>
 		</div>
 
-	</div>
-	<!-- end container -->
+		<div class="footer">
 
-
-
-	<div class="footer">
-
-		<ul class="nav nav-pills pull-left">
-			<li class="active"><a href="#">Home</a>
-			</li>
-			<li><a href="about.html">About</a>
-			</li>
-			<li><a href="contact.html">Contact</a>
-			</li>
-		</ul>
-
-		<div class="social-media">
-			<ul class="nav pull-left nav-pills">
-				<li><a href="https://twitter.com/cycling_woman"><i class="fa fa-twitter fa-2x"></i></a>
+			<ul class="nav nav-pills pull-left">
+				<li class="active"><a href="#">Home</a>
 				</li>
-				<li><a href="https://instagram.com/cycling_woman/"><i class="fa fa-instagram fa-2x"></i></a>
+				<li><a href="about.html">About</a>
 				</li>
-				<li><a href="https://www.youtube.com/channel/UCgZu2jNyVKDtqoq0zTUCDnw?sub_confirmation=1&feature=iv&src_vid=mWC514efG40&annotation_id=annotation_2210725983"><i class="fa fa-youtube-square fa-2x"></i></a>
+				<li><a href="contact.html">Contact</a>
 				</li>
 			</ul>
+
+			<div class="social-media">
+				<ul class="nav pull-left nav-pills">
+					<li><a href="https://twitter.com/cycling_woman"><i class="fa fa-twitter fa-2x"></i></a>
+					</li>
+					<li><a href="https://instagram.com/cycling_woman/"><i class="fa fa-instagram fa-2x"></i></a>
+					</li>
+					<li><a href="https://www.youtube.com/channel/UCgZu2jNyVKDtqoq0zTUCDnw?sub_confirmation=1&feature=iv&src_vid=mWC514efG40&annotation_id=annotation_2210725983"><i class="fa fa-youtube-square fa-2x"></i></a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
+	<!-- end container -->
 
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -141,7 +148,6 @@
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
-	<script src="/bower_components/jquery/dist/jquery.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -161,8 +167,6 @@
 	<!-- endbuild -->
 
 	<!-- build:js scripts/main.js -->
-	<script data-main="scripts/main" src="scripts/require.js"></script>
-	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
 </body>
 

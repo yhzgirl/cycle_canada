@@ -22,10 +22,13 @@ a {
 h1 {
 	font-family: 'Nunito', sans-serif;
 }
-
+*/
 h3 {
-	font-family: 'Text Me One', sans-serif;
-}*/
+	font-family: 'Noteworthy', sans-serif;
+	text-align: center;
+	font-weight: 600;
+	color: #2a3b62;
+}
 
 .logo {
 	display: inline-block;
@@ -67,6 +70,10 @@ h3 {
 		margin-left: 50px;
 		margin-bottom: 5px;
 		display: inline-block;
+		@media screen and (max-width: $screen-sm-min) {
+			margin-left: 10px;
+			font-size: .75em;
+		}
 	}
 	i {
 		color: #EB5700;
@@ -87,13 +94,17 @@ iframe {
 
 .youtube {
 	display: inline-block;
-	margin: 0;
+}
+
+.donate {
+	text-align: center;
 }
 
 .timeline {}
 
 .twitter {
 	display: inline-block;
+	text-align: center;
 }
 /* Responsive: Portrait tablets and up */
 
@@ -101,5 +112,4 @@ iframe {
 	.container {
 		max-width: 1460px;
 	}
-}
 }
