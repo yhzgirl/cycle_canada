@@ -27,7 +27,7 @@ h3 {
 	font-family: 'Noteworthy', sans-serif;
 	text-align: center;
 	font-weight: 600;
-	color: #2a3b62;
+	color: #2F4F99;
 }
 
 .logo {
@@ -35,7 +35,7 @@ h3 {
 	float: left;
 	img {
 		max-width: 100%;
-		margin: 25px;
+		margin: 25px 0 0 0;
 		@media (max-width: $screen-lg-min) {
 			max-width: 50%;
 		}
@@ -94,17 +94,37 @@ iframe {
 
 .youtube {
 	display: inline-block;
+	h3 {
+		max-width: 560px;
+	}
+}
+
+.instagram {
+	h3 {
+		max-width: 320px;
+	}
+}
+
+.strava {
+	h3 {
+		max-width: 280px;
+	}
 }
 
 .donate {
-	text-align: center;
+	a {
+		background-color: #0196D5;
+		vertical-align: middle;
+		border-color: #0196D5;
+		margin: 50% auto;
+	}
 }
-
-.timeline {}
 
 .twitter {
 	display: inline-block;
-	text-align: center;
+	h3 {
+		max-width: 520px;
+	}
 }
 /* Responsive: Portrait tablets and up */
 
