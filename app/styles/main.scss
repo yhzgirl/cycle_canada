@@ -55,12 +55,16 @@ h3 {
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
-	height: 20px;
+	height: 25px;
 	width: 100%;
 	padding: 0px 40px 40px 40px;
 	background-color: #2a3b62;
 	p {
 		color: #0196d5;
+	}
+	a {
+		color: #FCFCFC;
+		font-size: 1.1em;
 	}
 	li {
 		font-family: 'Lato', Helvetica, Arial, sans-serif;
@@ -112,11 +116,12 @@ iframe {
 }
 
 .donate {
+	margin: 50px auto;	
 	a {
 		background-color: #0196D5;
 		vertical-align: middle;
 		border-color: #0196D5;
-		margin: 50% auto;
+		margin: auto;
 	}
 }
 
@@ -124,6 +129,13 @@ iframe {
 	display: inline-block;
 	h3 {
 		max-width: 520px;
+	}
+}
+
+
+@media (max-width: $screen-sm-min) {
+	.stats div {
+		margin-bottom: 20px;
 	}
 }
 /* Responsive: Portrait tablets and up */

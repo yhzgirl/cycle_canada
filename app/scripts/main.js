@@ -5,4 +5,4 @@
 		$('#footer').load('footer.html');
 	});
 
-})(jQuery, window, document)
+})(jQuery, window, document);
