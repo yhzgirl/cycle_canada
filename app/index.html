@@ -33,83 +33,88 @@
     <![endif]-->
 
 	<div class=container>
-		<div class="col-lg-1">
-			<div class="donate">
-				<a class="canada btn btn-primary" href="https://crohnsandcolitiscanada.akaraisin.com/PersonalPages/Participant/DonationAmount.aspx?seid=8855&mid=64&pid=2449917">Donate to Crohn's Canada</a>
-				<p>Donate - UK coming soon</p>
-		</div>	
 		
-		<div class="logo"> <img src=images/logo-medium-reverse@2x.png> </div> 
-		</div>	
-		<div class="col-lg-11">
-
-		<div class="row stats">
+		<div class="col-lg-1 logo-col">
+			<div class="row">
+				<div class="logo">
+					<img src=images/logo-medium-reverse@2x.png>
+				</div>
+			</div>
 			
-			<div class="instagram col-lg-2">
-				<h3>Latest Pics</h3>
-				<div class="instagramMedia"></div>
-
-				<script>
-					function instagram() {
-						$.ajax({
-							url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=1910658902.aa2c401.cf848414fa6f43cd831db1c0895c79a9&callback=callback",
-							jsonp: "callback",
-							dataType: "jsonp",
-							success: function (response) {
-								var latestMedia = response.data[0].images.low_resolution.url;
-								var image = "<img src='" + latestMedia + "'>";
-								$('.instagramMedia').html(image);
-							}
-						});
-					}
-					instagram();
-				</script>
-
+			<div class="row">
+				<div class="donate">
+					<a class="canada btn btn-primary" href="https://crohnsandcolitiscanada.akaraisin.com/PersonalPages/Participant/DonationAmount.aspx?seid=8855&mid=64&pid=2449917">Donate to Crohn's Canada</a>
+					<p>Donate - UK coming soon</p>
+				</div>
 			</div>
+			
+		</div>
 
-			<div class="youtube col-lg-3">
-				<h3>The Vlog - Follow the adventure <i class="fa fa-share fa-rotate-90"></i></h3>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/mWC514efG40" frameborder="0" allowfullscreen></iframe>
-			</div>
+		<div class="col-lg-11">
+			<div class="row stats">
+				<div class="youtube col-lg-3">
+					<h3>The Vlog - Follow the adventure <i class="fa fa-share fa-rotate-90"></i></h3>
+					<iframe class="img-responsive" width="560" height="315" src="https://www.youtube.com/embed/mWC514efG40" frameborder="0" allowfullscreen></iframe>
+				</div>
 
-			<div class="twitter col-lg-3">
-				<h3>Tweets</h3>
-				<a class="twitter-timeline" href="https://twitter.com/cycling_woman" data-widget-id="637750175327481856"></a>
-				<script>
-					! function (d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0],
-							p = /^http:/.test(d.location) ? 'http' : 'https';
-						if (!d.getElementById(id)) {
-							js = d.createElement(s);
-							js.id = id;
-							js.src = p + "://platform.twitter.com/widgets.js";
-							fjs.parentNode.insertBefore(js, fjs);
+				<div class="instagram col-lg-2">
+					<h3>Latest Pics</h3>
+					<div class="instagramMedia"></div>
+
+					<script>
+						function instagram() {
+							$.ajax({
+								url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=1910658902.aa2c401.cf848414fa6f43cd831db1c0895c79a9&callback=callback",
+								jsonp: "callback",
+								dataType: "jsonp",
+								success: function (response) {
+									var latestMedia = response.data[0].images.low_resolution.url;
+									var image = "<img src='" + latestMedia + "' class='img-responsive'>";
+									$('.instagramMedia').html(image);
+								}
+							});
 						}
-					}(document, "script", "twitter-wjs");
-				</script>
+						instagram();
+					</script>
+				</div>
+
+				<div class="twitter col-lg-3">
+					<h3>Tweets</h3>
+					<a class="twitter-timeline" href="https://twitter.com/cycling_woman" data-widget-id="637750175327481856"></a>
+					<script>
+						! function (d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0],
+								p = /^http:/.test(d.location) ? 'http' : 'https';
+							if (!d.getElementById(id)) {
+								js = d.createElement(s);
+								js.id = id;
+								js.src = p + "://platform.twitter.com/widgets.js";
+								fjs.parentNode.insertBefore(js, fjs);
+							}
+						}(document, "script", "twitter-wjs");
+					</script>
+				</div>
+
+
+				<div class="strava col-lg-3">
+					<h3>How far we've travelled this week</h3>
+					<iframe class="img-responsive" height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/6288849/activity-summary/7fd9e0e1cfb50f535a4affd0e0e692e3f80c8916'></iframe>
+				</div>
 			</div>
 
-			<div class="strava col-lg-3">
-				<h3>How far we've travelled this week</h3>
-				<iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/6288849/activity-summary/7fd9e0e1cfb50f535a4affd0e0e692e3f80c8916'></iframe>
+
+			<div class="row timeline-row">
+
+				<div class="timeline col-lg-12">
+					<img src="images/timeline.png">
+				</div>
+
 			</div>
+
 		</div>
-		
-		
-		<div class="row top">
-
-
-			<div class="timeline col-lg-12">
-				<img src="images/timeline.png">
-			</div>
-
-		</div>
-
 		<div id="footer"></div>
-		</div>
 	</div>
 	<!-- end container -->
-
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>

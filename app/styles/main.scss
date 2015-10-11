@@ -10,9 +10,13 @@ $icon-font-path: '../fonts/';
 }
 
 body {
-	width: 2850px;
+	width: 2800px;
 	height: 100vh;
 	padding: 0 20px;
+	@media screen and (max-width: $screen-sm-min) {
+		max-width: 100vw;
+		padding: 0;
+	}
 }
 /*p,
 a {
@@ -23,6 +27,7 @@ h1 {
 	font-family: 'Nunito', sans-serif;
 }
 */
+
 h3 {
 	font-family: 'Noteworthy', sans-serif;
 	text-align: center;
@@ -31,23 +36,23 @@ h3 {
 }
 
 .logo {
-	display: inline-block;
-	float: left;
+	margin: 40px auto 0;
 	img {
-		max-width: 100%;
-		margin: 0 10px 25px 0;
-		@media (max-width: $screen-lg-min) {
-			max-width: 50%;
+		max-width: 275px;
+		@media (min-width: $screen-lg-min) {
+			max-width: 100%;
 		}
 	}
 }
 
 .timeline {
-	display: inline-block;
-	float: right;
+	margin-top: 40px;
 	img {
 		max-width: 90%;
 		margin: 25px;
+	}
+	@media screen and (min-width: 1440px) {
+		margin-top: 200px;
 	}
 }
 
@@ -59,6 +64,9 @@ h3 {
 	width: 100%;
 	padding: 0px 40px 40px 40px;
 	background-color: #2a3b62;
+	@media screen and (min-width: 1440px) {
+		height: 50px;
+	}
 	p {
 		color: #0196d5;
 	}
@@ -86,20 +94,42 @@ h3 {
 }
 
 .container {
-	min-width: 2800px;
-	@media (max-width: $screen-lg-min) {
-		padding-bottom: 60px;
+	@media (min-width: $screen-md-min) {
+		min-width: 2800px;
+	}
+	@media screen and (min-width: 1536px) {
+		margin-top: 80px;
 	}
 }
 
-iframe {
-	display: inline-block;
+.stats {
+	margin-top: 40px;
+	@media (max-width: $screen-sm-min) {
+		margin-top: 0;
+	}
+}
+
+.stats > div {
+	@media (max-width: $screen-sm-min) {
+		padding-top: 10px;
+	}
 }
 
 .youtube {
-	display: inline-block;
 	h3 {
 		max-width: 560px;
+	}
+	@media (min-width: $screen-md-min) {
+		margin-left: 60px;
+		iframe {
+			min-height: 320px;
+		}
+	}
+}
+
+.timeline-row {
+	@media (max-width: $screen-sm-min) {
+		display: none;
 	}
 }
 
@@ -110,13 +140,14 @@ iframe {
 }
 
 .strava {
+	max-width: 280px;
 	h3 {
 		max-width: 280px;
 	}
 }
 
 .donate {
-	margin: 50px auto;	
+	margin: 50px auto 10px;
 	a {
 		background-color: #0196D5;
 		vertical-align: middle;
@@ -126,22 +157,21 @@ iframe {
 }
 
 .twitter {
-	display: inline-block;
 	h3 {
 		max-width: 520px;
-	}
-}
-
-
-@media (max-width: $screen-sm-min) {
-	.stats div {
-		margin-bottom: 20px;
 	}
 }
 /* Responsive: Portrait tablets and up */
 
 @media screen and (min-width: 768px) {
 	.container {
-		max-width: 1460px;
+		max-width: 768px;
+	}
+}
+
+@media screen and (min-height: 720px) {
+	.timeline-row {
+		padding-bottom: 40px;
+		margin-top: 10px;
 	}
 }
