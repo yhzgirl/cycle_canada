@@ -10,7 +10,6 @@ $icon-font-path: '../fonts/';
 }
 
 body {
-	width: 2800px;
 	height: 100vh;
 	padding: 0 20px;
 	@media screen and (max-width: $screen-sm-min) {
@@ -23,10 +22,18 @@ a {
 	font-family: 'Lato', Helvetica, , Arial, sans-serif;
 }
 
+*/
+
+p {
+	font-family: 'Noteworthy', sans-serif;
+}
+
 h1 {
 	font-family: 'Nunito', sans-serif;
+	text-align: center;
+	font-size: 45px;
+	color: #2F4F99;
 }
-*/
 
 h3 {
 	font-family: 'Noteworthy', sans-serif;
@@ -93,7 +100,13 @@ h3 {
 	}
 }
 
-.container {
+.nav > li > a:hover,
+.nav > li > a:focus {
+	text-decoration: none;
+	background-color: #0196D5;
+}
+
+.container.main {
 	@media (min-width: $screen-md-min) {
 		min-width: 2800px;
 	}
@@ -101,6 +114,39 @@ h3 {
 		margin-top: 80px;
 	}
 }
+/* contact us page */
+#contact-us {
+	max-height: 100vh;
+}
+img.us {
+	width: 300px;
+	margin: 40px;
+}
+
+.contact {
+	padding-bottom: 45px;
+	i {
+		margin: 10px 20px;
+		color: #EB5700;
+	}
+	a {
+		color: #0196D5;
+		&:hover {
+		text-decoration: none;
+		color: rgba(1, 150, 213, 0.65);
+		}
+	}
+}
+
+/* end contact us page */
+
+.page-header {
+	border-bottom: none;
+	h3 {
+		font-weight: 300;
+	}
+}
+
 
 .stats {
 	margin-top: 40px;
