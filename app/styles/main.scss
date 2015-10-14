@@ -86,6 +86,10 @@ h3 {
 		font-family: 'Lato', Helvetica, Arial, sans-serif;
 		list-style-type: none;
 	}
+	.dropdown-menu > li > a {
+		font-family: 'Lato', Helvetica, Arial, sans-serif;
+		color: #0196d5;
+	}
 	.social-media {
 		margin-left: 50px;
 		margin-bottom: 5px;
@@ -101,10 +105,17 @@ h3 {
 	}
 }
 
+.dropdown-menu > li > a:focus,
 .nav > li > a:hover,
 .nav > li > a:focus {
 	text-decoration: none;
 	background-color: #0196D5;
+}
+
+.nav .open > a, 
+.nav .open > a:hover, 
+.nav .open > a:focus {
+	background-color: rgba(1,150,213,.65);	
 }
 
 .container.main {
@@ -141,6 +152,10 @@ img.us {
 /* end contact us page */
 
 /* about us page */
+#about-us {
+	max-width: 1400px;	
+}
+
 .about img {
 	width: 100px;
 	margin: 20px auto;
@@ -199,14 +214,11 @@ img.us {
 }
 
 .strava {
-	max-width: 280px;
+	max-width: 300px;
+	margin-bottom: 55px;
 	h3 {
-		max-width: 280px;
-	}
-	@media (min-width: $screen-md-min) {
-		iframe {
-			min-height: 160px;
-		}
+		max-width: 300px;
+		margin: 0 auto 10px;
 	}
 }
 
