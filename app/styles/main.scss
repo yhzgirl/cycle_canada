@@ -26,6 +26,7 @@ a {
 
 p {
 	font-family: 'Noteworthy', sans-serif;
+	font-size: 18px;
 }
 
 h1 {
@@ -137,13 +138,25 @@ img.us {
 		}
 	}
 }
-
 /* end contact us page */
+
+/* about us page */
+.about img {
+	width: 100px;
+	margin: 20px auto;
+}
+
+.about {
+	margin: 0 auto 70px;	
+	padding: 0 65px;
+}
 
 .page-header {
 	border-bottom: none;
+	margin-bottom: 10px;
 	h3 {
 		font-weight: 300;
+		color: #0196D5;
 	}
 }
 
