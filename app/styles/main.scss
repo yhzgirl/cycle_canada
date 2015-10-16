@@ -11,7 +11,7 @@ $icon-font-path: '../fonts/';
 
 body {
 	height: 100vh;
-	padding: 0 20px;
+	padding: 0 45px;
 	@media screen and (max-width: $screen-sm-min) {
 		max-width: 100vw;
 		padding: 0;
@@ -33,7 +33,8 @@ h1 {
 	font-family: 'Nunito', sans-serif;
 	text-align: center;
 	font-size: 45px;
-	color: #2F4F99;
+	color: #2a3b62;
+
 }
 
 h3 {
@@ -168,13 +169,17 @@ img.us {
 
 .page-header {
 	border-bottom: none;
-	margin-bottom: 10px;
+	margin: 0 auto 10px;
+	max-width: 900px;
 	h3 {
 		font-weight: 300;
 		color: #0196D5;
 	}
 }
 
+.row.stats, .row.timeline-row {
+	margin-left: 15px;
+}
 
 .stats {
 	margin-top: 40px;
@@ -221,14 +226,20 @@ img.us {
 		margin: 0 auto 10px;
 	}
 }
+.page-description {
+	margin-top: 30px;	
+}
 
 .donate {
-	margin: 50px auto 10px;
+	margin: 30px auto 20px;
 	a {
 		background-color: #0196D5;
 		vertical-align: middle;
 		border-color: #0196D5;
 		margin: auto;
+	}
+	.btn {
+		margin: 10px auto;
 	}
 }
 
