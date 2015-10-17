@@ -6,44 +6,14 @@
 	<meta name="Cycling Across Canada for Crohn's" content="Follow the adventure as Nathan and Michelle cycle over 6600km across Canada self suported while raising money and awearness of Crohn's Disease">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cycle Canada</title>
+	
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Nunito:400,700|Text+Me+One|Lato' rel='stylesheet' type='text/css'>
-	<!-- Place favicon.ico in the root directory -->
-
-	<!-- build:css styles/vendor.css -->
-	<!-- bower:css -->
-	<!-- endbower -->
-	<!-- endbuild -->
-
-	<!-- build:css styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
-	<!-- endbuild -->
 
-	<!-- build:js scripts/vendor/modernizr.js -->
 	<script src="/bower_components/modernizr/modernizr.js"></script>
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
-	<script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
-	<script src="scripts/main.js"></script>
-	
-	<script>
-		$(document).ready(function() {
-    $('html, body, *').mousewheel(function(e, delta) {
-        this.scrollLeft -= (delta * 2 );
-        e.preventDefault();
-    });
-});
-//		jQuery( document ).ready( function( $ ) {
-//    // Smooth Horizontal Scroll with Mouse
-//    this.$container = $('body');
-//    var self = this;
-//    this.$container.on('mousewheel', function(event) {
-//        self.$container.scrollLeft( self.$container.scrollLeft() - ( event.deltaY * event.deltaFactor ) );
-//    });
-//});
-	</script>
-	
-	<!-- endbuild -->
 </head>
 
 <body>
@@ -85,39 +55,11 @@
 				<div class="instagram col-lg-2">
 					<h3>Latest Pics</h3>
 					<div class="instagramMedia"></div>
-
-					<script>
-						function instagram() {
-							$.ajax({
-								url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=1910658902.aa2c401.cf848414fa6f43cd831db1c0895c79a9&callback=callback",
-								jsonp: "callback",
-								dataType: "jsonp",
-								success: function (response) {
-									var latestMedia = response.data[0].images.low_resolution.url;
-									var image = "<img src='" + latestMedia + "' class='img-responsive'>";
-									$('.instagramMedia').html(image);
-								}
-							});
-						}
-						instagram();
-					</script>
 				</div>
 
 				<div class="twitter col-lg-3">
 					<h3>Tweets</h3>
 					<a class="twitter-timeline" href="https://twitter.com/cycling_woman" data-widget-id="637750175327481856"></a>
-					<script>
-						! function (d, s, id) {
-							var js, fjs = d.getElementsByTagName(s)[0],
-								p = /^http:/.test(d.location) ? 'http' : 'https';
-							if (!d.getElementById(id)) {
-								js = d.createElement(s);
-								js.id = id;
-								js.src = p + "://platform.twitter.com/widgets.js";
-								fjs.parentNode.insertBefore(js, fjs);
-							}
-						}(document, "script", "twitter-wjs");
-					</script>
 				</div>
 
 
@@ -159,12 +101,8 @@
 		ga('send', 'pageview');
 	</script>
 
-	<!-- build:js scripts/vendor.js -->
-
-	<!-- bower:js -->
-	<!-- endbower -->
-	<!-- endbuild -->
-
+	<script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+	
 	<!-- build:js scripts/plugins.js -->
 	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
 	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -181,6 +119,7 @@
 	<!-- endbuild -->
 
 	<!-- build:js scripts/main.js -->
+	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
 </body>
 
