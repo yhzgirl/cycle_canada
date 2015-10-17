@@ -45,7 +45,7 @@ h3 {
 }
 
 .logo {
-	margin: 40px auto 0;
+	margin: 20px auto 0;
 	img {
 		max-width: 275px;
 		@media (min-width: $screen-lg-min) {
@@ -178,7 +178,7 @@ img.us {
 }
 
 .row.stats, .row.timeline-row {
-	margin-left: 15px;
+	margin-left: 20px;
 }
 
 .stats {
@@ -227,11 +227,11 @@ img.us {
 	}
 }
 .page-description {
-	margin-top: 30px;	
+	margin-top: 20px;	
 }
 
 .donate {
-	margin: 30px auto 20px;
+	margin: 20px auto 0;
 	a {
 		background-color: #0196D5;
 		vertical-align: middle;
