@@ -1,15 +1,12 @@
 (function ($, window, document, undefined) {
-
 	$(function () {
-		$('#header').load('header.html');
 		$('#footer').load('footer.html');
 	});
-
 })(jQuery, window, document);
 
 /* horizontal scroll on mousewheel */
-$(document).ready(function () {
-	$('html, body, *').mousewheel(function (e, delta) {
+jQuery(document).ready(function () {
+	jQuery('html, body, *').mousewheel(function (e, delta) {
 		this.scrollLeft -= (delta * 2);
 		e.preventDefault();
 	});
