@@ -1,3 +1,4 @@
+/* load footer */
 (function ($, window, document, undefined) {
 	$(function () {
 		$('#footer').load('footer.html');
@@ -6,10 +7,12 @@
 
 /* horizontal scroll on mousewheel */
 jQuery(document).ready(function () {
-	jQuery('html, body, *').mousewheel(function (e, delta) {
-		this.scrollLeft -= (delta * 2);
-		e.preventDefault();
-	});
+	if( jQuery(window).width() > 1200 ) {
+		jQuery('html, body, *').mousewheel(function (e, delta) {
+			this.scrollLeft -= (delta * 2);
+			e.preventDefault();
+		});
+	}
 });
 
 /* Instagram latest image */
@@ -20,7 +23,7 @@ function instagram() {
 		dataType: "jsonp",
 		success: function (response) {
 			var latestMedia = response.data[0].images.low_resolution.url;
-			var image = "<img src='" + latestMedia + "' class='img-responsive'>";
+			var image = "<img src='" + latestMedia + "' class='img-responsive center-block'>";
 			jQuery('.instagramMedia').html(image);
 		}
 	});
