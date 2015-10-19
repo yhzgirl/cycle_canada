@@ -12,6 +12,9 @@ $icon-font-path: '../fonts/';
 body {
 	height: 100vh;
 	padding: 0 45px;
+	@media screen and (max-width: $screen-md-min) {
+		max-width: 100vh;
+	}
 	@media screen and (max-width: $screen-sm-min) {
 		max-width: 100vw;
 		padding: 0;
@@ -160,7 +163,7 @@ img.us {
 #about-us {
 	max-width: 1400px;	
 	@media (max-width: $screen-sm-min) {
-		min-width: 80vh; 
+		padding: 0;
 	}
 }
 
@@ -256,7 +259,6 @@ img.us {
 		min-width: 250px;
 		margin: 10px auto;
 	}
-}
 
 .twitter {
 	h3 {
@@ -266,7 +268,7 @@ img.us {
 }
 /* Responsive: Portrait tablets and up */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width:768px) {
 	.container {
 		max-width: 768px;
 	}
