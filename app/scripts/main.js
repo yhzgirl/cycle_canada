@@ -23,7 +23,7 @@ function instagram() {
 		dataType: "jsonp",
 		success: function (response) {
 			var latestMedia = response.data[0].images.low_resolution.url;
-			var image = "<img src='" + latestMedia + "' class='img-responsive center-block'>";
+			var image = "<img alt='latest instagram photo' src='" + latestMedia + "' class='img-responsive center-block'>";
 			jQuery('.instagramMedia').html(image);
 		}
 	});
