@@ -145,6 +145,8 @@ img.us {
 
 .contact {
 	padding-bottom: 45px;
+	margin: 60px auto 70px;	
+	max-width: 1400px;
 	i {
 		margin: 10px 20px;
 		color: #EB5700;
@@ -161,7 +163,7 @@ img.us {
 
 /* about us page */
 #about-us {
-	max-width: 1400px;	
+	max-width: 1400px;
 	@media (max-width: $screen-sm-min) {
 		padding: 0;
 	}
@@ -176,6 +178,7 @@ img.us {
 	margin: 0 auto 70px;	
 	padding: 0 65px;
 }
+/* end about us page */
 
 .page-header {
 	border-bottom: none;
@@ -259,6 +262,7 @@ img.us {
 		min-width: 250px;
 		margin: 10px auto;
 	}
+}
 
 .twitter {
 	h3 {
