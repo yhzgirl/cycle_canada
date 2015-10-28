@@ -26,6 +26,15 @@ a {
 }
 
 */
+section {
+	max-width: 900px;		
+	padding: 40px 70px;
+	margin: 0 auto 40px;
+}
+
+#disqus_thread {
+	margin-top: 60px;	
+}
 
 p {
 	font-family: 'Noteworthy', sans-serif;
@@ -76,9 +85,9 @@ div.logo-column {
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
-	height: 25px;
+	height: 50px;
 	width: 100%;
-	padding: 0px 40px 40px 40px;
+	padding: 5px 40px 40px 40px;
 	background-color: #2a3b62;
 	@media screen and (min-width: 1440px) {
 		height: 50px;

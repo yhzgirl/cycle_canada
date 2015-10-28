@@ -1,3 +1,8 @@
+
+	$(document).ready(function () {
+		$(".dropdown-toggle").dropdown("dropdown-toggle");
+	});
+
 /* load footer */
 (function ($, window, document, undefined) {
 	$(function () {
