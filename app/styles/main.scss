@@ -203,6 +203,12 @@ img.us {
 	margin: 20px auto;
 }
 
+.about {
+	margin: 0 auto 70px;	
+	padding: 0 65px;
+}
+/* end about us page */
+
 /* gear page */
 
 #gear .row {
@@ -221,11 +227,15 @@ img.us {
 	margin-top: 80px;
 }
 
-.about {
-	margin: 0 auto 70px;	
-	padding: 0 65px;
+/* end gear page */
+
+/* route page */
+
+#route iframe {
+	margin: 25px 5px 100px;
 }
-/* end about us page */
+
+/* end route page */
 
 .page-header {
 	border-bottom: none;
