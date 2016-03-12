@@ -11,7 +11,7 @@ $icon-font-path: '../fonts/';
 
 body {
 	height: 100vh;
-	padding: 0 45px;
+	padding: 0 30px;
 	@media screen and (max-width: $screen-md-min) {
 		max-width: 100vh;
 	}
@@ -67,7 +67,7 @@ h4 {
 	img {
 		max-width: 230px;
 		@media (min-width: $screen-lg-min) {
-			max-width: 100%;
+			max-width: 95%;
 		}
 	}
 }
