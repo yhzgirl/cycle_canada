@@ -10,16 +10,6 @@
 	});
 })(jQuery, window, document);
 
-/* horizontal scroll on mousewheel */
-jQuery(document).ready(function () {
-	if( jQuery(window).width() > 1200 ) {
-		jQuery('html, body, *').mousewheel(function (e, delta) {
-			this.scrollLeft -= (delta * 2);
-			e.preventDefault();
-		});
-	}
-});
-
 /* Instagram latest image */
 function instagram() {
 	jQuery.ajax({
@@ -35,14 +25,14 @@ function instagram() {
 }
 instagram();
 
-/* Twitter feed */
-! function (d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0],
-		p = /^http:/.test(d.location) ? 'http' : 'https';
-	if (!d.getElementById(id)) {
-		js = d.createElement(s);
-		js.id = id;
-		js.src = p + "://platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}
-}(document, "script", "twitter-wjs");
+///* Twitter feed */
+//! function (d, s, id) {
+//	var js, fjs = d.getElementsByTagName(s)[0],
+//		p = /^http:/.test(d.location) ? 'http' : 'https';
+//	if (!d.getElementById(id)) {
+//		js = d.createElement(s);
+//		js.id = id;
+//		js.src = p + "://platform.twitter.com/widgets.js";
+//		fjs.parentNode.insertBefore(js, fjs);
+//	}
+//}(document, "script", "twitter-wjs");
