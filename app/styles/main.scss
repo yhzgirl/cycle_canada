@@ -288,10 +288,14 @@ img.ride-on {
 	@media screen and (max-width: $screen-sm-min) {
 		max-width: 90%;
 		}
+	iframe {
+		height: 175px;
+	}
 }
 
 .page-description {
 	margin: 40px 70px 30px;	
+	max-width: 850px;
 	@media screen and (max-width: $screen-sm-min) {
 		margin: 30px 10px 20px;
 		}
@@ -300,9 +304,9 @@ img.ride-on {
 .donate {
 	margin: 25px auto 0;
 	a {
-		background-color: #0196D5;
+		background-color: #F15A29;
 		vertical-align: middle;
-		border-color: #0196D5;
+		border-color: #F15A29;
 		margin: auto;
 		font-size: 1.2em;
 	}
@@ -318,6 +322,17 @@ img.ride-on {
 	}
 }
 
+div.donate.row {
+	max-width: 800px;
+}
+#sponsors h2 {
+	margin: 30px 0 50px;	
+}
+
+.sponsor img {
+	max-width: 320px;
+	max-height: 250px;
+}
 /* Responsive: Portrait tablets and up */
 
 @media screen and (min-width:768px) {
